@@ -1,0 +1,5 @@
+# Follow IsaacLab installation: https://isaac-sim.github.io/IsaacLab
+# isaaclab_mimic is included in IsaacLab
+h5py
+torch
+numpy
