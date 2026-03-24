@@ -14,7 +14,7 @@ The Franka robot must pick up a cube from a randomized position on a table and p
 3. **Generation** — Scale to 200+ demos using Isaac Lab Mimic + CuroBO skillgen
 
 ## Dataset
-The generated dataset is available on Hugging Face: [YOUR_HF_LINK]
+The generated dataset is available on Hugging Face: [franka-place-cube-in-box-mimic-dataset](https://huggingface.co/datasets/Ekshan267/franka-place-cube-in-box-mimic-dataset/tree/main)
 
 ---
 
