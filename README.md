@@ -48,11 +48,10 @@ This repo contains two custom environment files that must be placed inside your 
 | `franka_place_mimic_env.py` | `~/IsaacLab/source/isaaclab_mimic/isaaclab_mimic/envs/` |
 | `franka_place_mimic_env_cfg.py` | `~/IsaacLab/source/isaaclab_mimic/isaaclab_mimic/envs/` |
 ```bash
-cp franka_place_mimic_env.py \
-    ~/IsaacLab/source/isaaclab_mimic/isaaclab_mimic/envs/
+INSTALL_ENVS=~/miniforge3/envs/env_isaaclab/lib/python3.11/site-packages/isaaclab/source/isaaclab_mimic/isaaclab_mimic/envs
 
-cp franka_place_mimic_env_cfg.py \
-    ~/IsaacLab/source/isaaclab_mimic/isaaclab_mimic/envs/
+cp franka_place_mimic_env.py $INSTALL_ENVS/
+cp franka_place_mimic_env_cfg.py $INSTALL_ENVS/
 ```
 
 ### 3. Update the path in franka_place_mimic_env_cfg.py
