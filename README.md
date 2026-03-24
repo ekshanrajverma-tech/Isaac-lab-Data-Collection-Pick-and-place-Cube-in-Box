@@ -83,31 +83,6 @@ gym.register(
 
 This registers the task ID `Isaac-Place-Cube-Into-Box-Franka-JointPos-Mimic-v0` which is used in all commands below.
 
-### 5. Apply IsaacLab bug fix
-There is a bug in IsaacLab's `annotate_demos.py` where `subtask_start_signals` are not converted to tensors. Run this once to fix it:
-```bash
-python3 - << 'EOF'
-path = "/home/YOUR_USERNAME/IsaacLab/scripts/imitation_learning/isaaclab_mimic/annotate_demos.py"
-
-with open(path, "r") as f:
-    content = f.read()
-
-old = """            for signal_name, signal_flags in subtask_start_signal_dict.items():
-                if not torch.any(signal_flags):"""
-
-new = """            for signal_name, signal_flags in subtask_start_signal_dict.items():
-                signal_flags = torch.tensor(signal_flags, device=env.device)
-                if not torch.any(signal_flags):"""
-
-assert old in content, "Pattern not found - check your IsaacLab version"
-content = content.replace(old, new)
-
-with open(path, "w") as f:
-    f.write(content)
-print("Done")
-EOF
-```
-
 ---
 
 ## End-to-End Run
